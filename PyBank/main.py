@@ -1,7 +1,30 @@
 import csv
 
-csvreader='../Resources/Budget_Date.csv'
+##Define the data path
+budget_csv ='../Resources/Budget_Date.csv'
+
+##Create function to calculate and display a summary of the Budget
+def printbudsummary(budget_data):
+
+    ##Data types
+    date = str(budget_data[0])
+    pl = int(budget_data[1])
+
+    ##Total number of months (count rows)
+
+    ##Net total of profit/losses for the entire period(sum of profit/loss)
+
+    ##Calculate the change from start to end of profit/loss(profit[end]-profit[0])
+
+    ##Greated increase (max profit/loss)
+
+    ##Greatest decrease (min profit/loss)
 
 
 
-open with(x) as csvfile:
+##Open budget data file
+open with(budget_csv) as csvfile:
+
+    csvreader=csv.reader(csvfile, delimiter=",")
+
+    header = next(csvreader)
