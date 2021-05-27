@@ -11,15 +11,19 @@ def printbudsummary(budget_data):
     pl = int(budget_data[1])
 
     ##Total number of months (count rows)
+    for 
 
     ##Net total of profit/losses for the entire period(sum of profit/loss)
-
+    ntotal=sum(pl)
+    
     ##Calculate the change from start to end of profit/loss(profit[end]-profit[0])
+    plchange=0
 
     ##Greated increase (max profit/loss)
+    maxpl=max(pl)
 
     ##Greatest decrease (min profit/loss)
-
+    minpl=min(pl)
 
 
 ##Open budget data file

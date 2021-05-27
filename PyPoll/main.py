@@ -22,6 +22,9 @@ def vote_anal(poll_data):
 
 
 
-with open(poll_data) as csvfile:
+with open(poll_csv) as csvfile:
     csvreader=csv.reader(csvfile, delimiter=',')
 
+    header=next(csvreader)
+
+    
