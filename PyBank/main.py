@@ -23,7 +23,7 @@ def printbudsummary(budget_data):
 
 
 ##Open budget data file
-open with(budget_csv) as csvfile:
+with open(budget_csv) as csvfile:
 
     csvreader=csv.reader(csvfile, delimiter=",")
 
