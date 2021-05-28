@@ -5,11 +5,12 @@ import csv
 budget_csv=('Resources/budget_data.csv')
 
 ##Create function to calculate and display a summary of the Budget
+
 #def budsummary(budget):
 
     ##Data types
-    
     ###what data type is the date & do I even need these variables?
+    
     #date = str(budget[0])
     #pl = int(budget[1])
 
@@ -57,4 +58,5 @@ with open(budget_csv, 'r') as csvfile:
     csvreader=csv.reader(csvfile, delimiter=",")
 
     header = next(csvreader)
+    
     print(len(list(csvreader)))

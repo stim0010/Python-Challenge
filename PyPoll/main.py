@@ -2,7 +2,9 @@ import csv
 
 poll_csv = "Resources/election_data.csv"
 
-#def vote_anal(poll_data):
+##CREATE FUNCTION 
+
+#def vote_analysis(poll_data):
 
     #voter_ID=int(poll_data[0])
     #county=str(poll_data[1])
