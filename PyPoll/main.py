@@ -1,8 +1,8 @@
 import csv
 
-poll_csv = "../Resources/election_data.csv"
+poll_csv = "Resources/election_data.csv"
 
-def vote_anal(poll_data):
+#def vote_anal(poll_data):
 
     #voter_ID=int(poll_data[0])
     #county=str(poll_data[1])
@@ -47,5 +47,6 @@ with open(poll_csv) as csvfile:
     csvreader=csv.reader(csvfile, delimiter=',')
 
     header=next(csvreader)
-
+    
+    print(len(list(csvreader)))
     

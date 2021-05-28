@@ -5,16 +5,16 @@ import csv
 budget_csv=('Resources/budget_data.csv')
 
 ##Create function to calculate and display a summary of the Budget
-def budsummary(budget):
+#def budsummary(budget):
 
     ##Data types
     
     ###what data type is the date & do I even need these variables?
     #date = str(budget[0])
     #pl = int(budget[1])
-63
+
     ##Total number of months (count rows)
-    total_months = len(list(budget[0]))
+    #total_months = len(list(budget[0]))
 
     ##Net total of profit/losses for the entire period(sum of profit/loss)
     ##need to determine the proper way to sum +/- integers
@@ -35,7 +35,7 @@ def budsummary(budget):
     
     #print(f'Financial Analysis')
     #print(f'-----------------------------')
-    print(f'Total Months: {total_months}')
+    #print(f'Total Months: {total_months}')
     #print(f'Total: {nptotal}')
     #print(f'Average Change: {plchange}')
     #print(f'Greatest increase in profits: {date[row]} + '('+{maxpl}+')'')
@@ -56,7 +56,5 @@ with open(budget_csv, 'r') as csvfile:
 
     csvreader=csv.reader(csvfile, delimiter=",")
 
-    #header = next(csvreader)
-    print(len(list(csvreader))
-
- 
+    header = next(csvreader)
+    print(len(list(csvreader)))
