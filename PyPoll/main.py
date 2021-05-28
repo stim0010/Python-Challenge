@@ -20,6 +20,8 @@ def vote_anal(poll_data):
 
     ##The winner of the election based on popular vote 
     
+    ###########################################################################
+    
     #print('Election Results')
     #print('---------------------')
     #print(f'Total Votes: {total_votes}')
@@ -35,6 +37,10 @@ def vote_anal(poll_data):
 ####candidate(x): {p_won} + '(' + {can_votes} + ')'
 ####----------------
 ####Winner: max({can_votes})
+
+
+###############################################################################
+
 
 with open(poll_csv) as csvfile:
     
