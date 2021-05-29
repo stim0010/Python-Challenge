@@ -29,7 +29,7 @@ with open(poll_csv) as csvfile:
                 
            if pre_row != cur_row:
                
-               append.cans(str(row[1]))
+               append.name(str(row[1]))
                     
             pre_row = cur_row
         
