@@ -62,8 +62,26 @@ with open(budget_csv, 'r') as csvfile:
     print(f'---------------------')
     print(f'Total Months: {total_months}')
     print(f'Total: $ {nptotal}')
+    ##format number to 2 decimal places
     print(f'Average Change: {avgchange}')
     #print(f'Greatest increase in profits: {row[0] -- max} ({maxpl})'
     #print(f'Greatest decrease in profits: {row[0] -- min} ({minpl})'
     
-    ##Write summary output to a csv file
+#######Write summary output to a csv file
+# Specify the file to write to
+output_path = "PyBank_summary.txt"
+
+# Open the file using "write" mode. Specify the variable to hold the contents
+with open(output_path, 'w', newline='') as csvfile:
+
+    # Initialize csv.writer
+    csvwriter = csv.writer(csvfile, delimiter=',')
+
+   
+    csvwriter.writerow([f'Financial Analysis'])
+    csvwriter.writerow([f'---------------------'])
+    csvwriter.writerow([f'Total Months: {total_months}'])
+    csvwriter.writerow([f'Total Months: {total_months}'])
+    csvwriter.writerow([f'Average Change: {avgchange}'])
+   #3 csvwriter.writerow([f'Greatest increase in profits: {row[0] -- max} ({maxpl})'])
+    #csvwriter.writerow([f'Greatest decrease in profits: {row[0] -- min} ({minpl})'])
