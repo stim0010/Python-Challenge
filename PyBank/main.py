@@ -23,8 +23,7 @@ with open(budget_csv, 'r') as csvfile:
     prev_row = 0
     avgchange = 0
     month_change = 0
-    maxpl = 0
-    minpl = 0
+  
 
     for row in csvreader:
         
@@ -49,6 +48,7 @@ with open(budget_csv, 'r') as csvfile:
         prev_row = current_row
         total_change = total_change + month_change
         
+        
     
     ## Calc average change in profit/loss (month to month)
     avgchange = total_change / (total_months - 1)
@@ -62,24 +62,24 @@ with open(budget_csv, 'r') as csvfile:
     print(f'Total: $ {nptotal}')
     ##format number to 2 decimal places
     print(f'Average Change: {format_avgchange}')
-    #print(f'Greatest increase in profits: {row[0] -- max} ({maxpl})'
-    #print(f'Greatest decrease in profits: {row[0] -- min} ({minpl})'
+    #print(f'Greatest increase in profits:  ({maxpl})')
+    #print(f'Greatest decrease in profits:  ({minpl})'
     
 #######Write summary output to a csv file
 # Specify the file to write to
-#output_path = "PyBank_summary.txt"
+output_path = "PyBank_summary.txt"
 
 # Open the file using "write" mode. Specify the variable to hold the contents
-#with open(output_path, 'w', newline='') as csvfile:
+with open(output_path, 'w', newline='') as csvfile:
 
     # Initialize csv.writer
-    #csvwriter = csv.writer(csvfile, delimiter=',')
+    csvwriter = csv.writer(csvfile, delimiter=',')
 
     ##OUTPUT TEXT
-   # csvwriter.writerow([f'Financial Analysis'])
-   # csvwriter.writerow([f'---------------------'])
-   # csvwriter.writerow([f'Total Months: {total_months}'])
-   # csvwriter.writerow([f'Total Months: {total_months}'])
-    #csvwriter.writerow([f'Average Change: {avgchange}'])
+    csvwriter.writerow([f'Financial Analysis'])
+    csvwriter.writerow([f'---------------------'])
+    csvwriter.writerow([f'Total Months: {total_months}'])
+    csvwriter.writerow([f'Total Months: {total_months}'])
+    csvwriter.writerow([f'Average Change: {avgchange}'])
     #csvwriter.writerow([f'Greatest increase in profits: {row[0] -- max} ({maxpl})'])
     #csvwriter.writerow([f'Greatest decrease in profits: {row[0] -- min} ({minpl})'])
