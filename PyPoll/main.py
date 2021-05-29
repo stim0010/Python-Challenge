@@ -4,19 +4,22 @@ poll_csv = "Resources/election_data.csv"
 
 ##CREATE FUNCTION 
 
-#def vote_analysis(poll_data):
+def vote_analysis(poll_data):
 
-    #voter_ID=int(poll_data[0])
-    #county=str(poll_data[1])
-    #candidate=str(poll_data[2])
+    voter_ID=int(poll_data[0])
+    county=str(poll_data[1])
+    candidate=str(poll_data[2])
 
     ##Total votes cast (count row)
-    #total_votes=len(list(poll_data[0]))
-
-    ##Complete list of candidates who recieved votes (list name and remove duplicates)
+    total_votes=0
+    total _votes=total_votes+1
+    
+    ##Complete list of candidates who recieved votes (list names and remove duplicates)
+    
     
     ##The percentage of votes each candidate won (candidate votes/total votes)
-    ## p_won=(# of candidate)/total_votes
+    if 
+    ## p_won=(# of votes for candidate)/total_votes
     
     ##The total number of votes each canidate won (count candidate votes)
 
@@ -50,5 +53,6 @@ with open(poll_csv) as csvfile:
 
     header=next(csvreader)
     
-    print(len(list(csvreader)))
+    for row in csvreader:
+        vote_analysis(row)
     
