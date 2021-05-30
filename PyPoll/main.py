@@ -13,7 +13,7 @@ with open(poll_csv) as csvfile:
     total_votes = 0
     
     # tuple
-    name, pct_vote, can_votes = ()
+    name, pct_vote, can_votes = ('','','')
     
 
     for row in csvreader:
@@ -49,7 +49,7 @@ with open(poll_csv) as csvfile:
     print('---------------------')
     print(f'Total Votes: {total_votes}')
     print('---------------------')
-    for can in can_list:     
+    #for can in can_list:     
         #print(f'{cans[]}: {vote_pct[]} ({can_votes[]})')
     print(f'---------------------')
     #find max(can_votes)
