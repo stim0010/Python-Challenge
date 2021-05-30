@@ -1,8 +1,8 @@
-
+##Import csv library
 import csv
 
 ##Define the data path
-budget_csv=('Resources/budget_data.csv')
+budget_csv = ('Resources/budget_data.csv')
 
 ###FUNCTIONS
 
@@ -29,6 +29,7 @@ with open(budget_csv, 'r') as csvfile:
     month_change = 0
     maxpl = 0.0
     minpl = 0.0
+   
   
 ###For loop to move through the rows in the csv file
     for row in csvreader:
@@ -43,7 +44,7 @@ with open(budget_csv, 'r') as csvfile:
         
     ###AVERAGE CHANGE (MONTH to MONTH)
         ##Find the average change in profit/loss between each month
-        current_row = int(row[1])
+        current_row = float(row[1])
         
        
     ##Find max for row[1] and determine date 
