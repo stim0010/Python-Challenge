@@ -10,8 +10,10 @@ with open(poll_csv) as csvfile:
     ##Read Poll data csv file
     csvreader=csv.reader(csvfile, delimiter=',')
     
+    ##Columns voter id, county, name
+    
     ##skip header
-    header=next(csvreader)
+    header = next(csvreader)
     
     #define variables
     total_votes = 0
@@ -19,18 +21,18 @@ with open(poll_csv) as csvfile:
     prev_row = 0
     
     # tuple
-    name, pct_vote, can_votes = ('','','')
+    name, pct_vote, can_votes = ('', 0.0, 0)
     
     ##For loop throught the rows in the csv file
     for row in csvreader:
         
         ##Calc total number of votes by counting the rows
-        total_votes = total_votes + 1
+        total_votes += 1
         
         curr_row = int(row[0])
         
         if curr_row != prev_row:
-            append.name(str(row[1]))
+            append.name(row[2])
         else:
             pre_row = cur_row
         

@@ -36,11 +36,11 @@ with open(budget_csv, 'r') as csvfile:
         
     ###TOTAL MONTHS
         ##Find number of months by counting each row
-        total_months = total_months + 1
+        total_months += 1
         
     ###TOTAL PROFIT/LOSS
         ##Find the total profit/loss by adding each row
-        nptotal = nptotal + int(row[1])
+        nptotal += int(row[1])
         
     ###AVERAGE CHANGE (MONTH to MONTH)
         ##Find the average change in profit/loss between each month
@@ -48,12 +48,12 @@ with open(budget_csv, 'r') as csvfile:
         
        
     ##Find max for row[1] and determine date 
-        if current_row >= prev_row:
+        if current_row > prev_row:
             maxpl = current_row
             max_date = row[0]
         
     ##Find min for row[1] and determine date
-        if current_row <= prev_row:
+        if current_row < prev_row:
             minpl = current_row
             min_date = row[0]
         
@@ -100,5 +100,5 @@ with open(budget_csv, 'r') as csvfile:
     #csvwriter.writerow([f'Total Months: {total_months}'])
     #csvwriter.writerow([f'Total Months: {total_months}'])
     #csvwriter.writerow([f'Average Change: {avgchange}'])
-    #csvwriter.writerow([f'Greatest increase in profits: {row[0] -- max} ({maxpl})'])
-    #csvwriter.writerow([f'Greatest decrease in profits: {row[0] -- min} ({minpl})'])
+    #csvwriter.writerow([f'Greatest increase in profits: {max_date} ({maxpl})'])
+    #csvwriter.writerow([f'Greatest decrease in profits: {min_date} ({minpl})'])
